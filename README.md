@@ -157,7 +157,7 @@ curl -u admin:admin http://<SERVER_IP>:<PORT>/search.php?search=flag -v -i -H "A
 
 Whenever web applications need to transfer files or move the user parameters from the URL, they utilize POST requests.
 
-Login Forms
+#### Login Forms
 
 The exercise at the end of this section is similar to the example we saw in the GET section. However, once we visit the web application, we see that it utilizes a PHP login form instead of HTTP basic auth:
 With the request data at hand, we can try to send a similar request with cURL, to see whether this would allow us to login as well
@@ -170,7 +170,28 @@ curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/
 > Tip: Many login forms would redirect us to a different page once authenticated (e.g. /dashboard.php). If we want to follow the redirection with cURL, we can use the -L flag.
 
 
+### Authenticated Cookies
 
+If we were successfully authenticated, we should have received a cookie so our browsers can persist our authentication, and we don't need to login every time we visit the page. We can use the -v or -i flags to view the response, which should contain the Set-Cookie header with our authenticated cookie:
+
+```
+curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/ -i
+
+HTTP/1.1 200 OK
+Date: 
+Server: Apache/2.4.41 (Ubuntu)
+Set-Cookie: PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1; path=/
+```
+
+With our authenticated cookie, we should now be able to interact with the web application without needing to provide our credentials every time. To test this, we can set the above cookie with the -b flag in cURL, as follows:
+
+```
+curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/
+```
+As we can see, we were indeed authenticated and got to the search function. It is also possible to specify the cookie as a header, as follows:
+```
+curl -H 'Cookie: PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/
+```
 
 ### 1.2 HTTP Methods
 _________
