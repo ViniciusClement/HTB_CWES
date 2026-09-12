@@ -63,6 +63,27 @@ HTTPS (HTTP Secure) protocol was created, in which all communications are transf
 
 We may face such an issue when testing a local web application or with a web application hosted for practice purposes, as such web applications may not yet have implemented a valid SSL certificate. To skip the certificate check with cURL, we can use the -k flag
 
+**HTTP Requests and Responses**
+
+Once the server receives the HTTP request, it processes it and responds by sending the HTTP response, which contains the response code, as discussed in a later section, and may contain the resource data if the requester has access to it.
+
+HTTP Request
+
+<img width="783" height="354" alt="image" src="https://github.com/user-attachments/assets/57c84a30-e7ad-4cb1-ab00-1ed2401878dd" />
+
+HTTP Response
+
+<img width="780" height="418" alt="image" src="https://github.com/user-attachments/assets/e7485c82-1a69-452c-abc9-b4bad85defb4" />
+
+ To view the full HTTP request and response, we can simply add the -v verbose flag to on curl our earlier commands.
+
+```
+curl inlanefreight.com -v
+```
+> [!NOTE]
+> HTTP version 1.X sends requests as clear-text, and uses a new-line character to separate different fields and different requests. HTTP version 2.X, on the other hand, sends requests as binary data in a dictionary form.
+
+
 ### 1.2 HTTP Methods
 _________
 ## 2. Introduction web applications
