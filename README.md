@@ -153,12 +153,21 @@ curl -H 'Authorization: Basic YWRtaW46YWRtaW4=''http://<SERVER_IP>:<PORT>/search
 curl -u admin:admin http://<SERVER_IP>:<PORT>/search.php?search=flag -v -i -H "Authorization: Basic YWRtaW46YWRtaW4="
 ```
 
+#### POST
 
+Whenever web applications need to transfer files or move the user parameters from the URL, they utilize POST requests.
 
+Login Forms
 
+The exercise at the end of this section is similar to the example we saw in the GET section. However, once we visit the web application, we see that it utilizes a PHP login form instead of HTTP basic auth:
+With the request data at hand, we can try to send a similar request with cURL, to see whether this would allow us to login as well
 
+```
+curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/
+```
 
-
+> [!TIP]
+> Tip: Many login forms would redirect us to a different page once authenticated (e.g. /dashboard.php). If we want to follow the redirection with cURL, we can use the -L flag.
 
 
 
