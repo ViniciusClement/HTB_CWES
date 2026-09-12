@@ -25,8 +25,8 @@
 _________
 
 ## 1. Web Requests
-### 1.1 HTTP Fundamentals
 
+### 1.1 HTTP Fundamentals
 **HyperText Transfer Protocol (HTTP)**
 
 HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. The default port for HTTP communication is port 80, though this can be changed to any other port, depending on the web server configuration.
@@ -35,9 +35,20 @@ We enter a Fully Qualified Domain Name (FQDN) as a Uniform Resource Locator (URL
 
 
 **URL**
-
 Resources over HTTP are accessed via a URL, which offers many more specifications than simply specifying a website we want to visit. Let's look at the structure of a URL:
 
+<img width="846" height="180" alt="image" src="https://github.com/user-attachments/assets/e7b3008a-af1d-4c9d-b6a4-4e7e2228a464" />
+
+<img width="897" height="729" alt="image" src="https://github.com/user-attachments/assets/d15f2b88-b548-4895-b35a-f9f63a66eb7f" />
+
+**HTTP Flow**
+
+<img width="855" height="364" alt="image" src="https://github.com/user-attachments/assets/01802c1b-c7a2-408e-877f-2b4e350d5f3a" />
+
+The diagram above presents the anatomy of an HTTP request at a very high level. The first time a user enters the URL (inlanefreight.com) into the browser, it sends a request to a DNS (Domain Name System) server to resolve the domain and get its IP. The DNS server looks up the IP address for inlanefreight.com and returns it. All domain names need to be resolved this way, as a server can't communicate without an IP address.
+
+> [!NOTE]
+> Our browsers usually first look up records in the local '/etc/hosts' file, and if the requested domain does not exist within it, then they would contact other DNS servers. We can use the '/etc/hosts' to manually add records to for DNS resolution, by adding the IP followed by the domain name.
 
 ### 1.2 HTTP Methods
 _________
