@@ -115,17 +115,42 @@ curl https://www.inlanefreight.com -A 'Mozilla/5.0'
 HTTP supports multiple methods for accessing a resource. In the HTTP protocol, several request methods allow the browser to send information, forms, or files to the server. These methods are used, among other things, to tell the server how to process the request we send and how to reply.
 
 **Request Methods**
+
 <img width="835" height="579" alt="image" src="https://github.com/user-attachments/assets/da374a28-2345-466f-ba9b-c1895dbbd3af" />
 
 **Status Codes**
+
 <img width="823" height="335" alt="image" src="https://github.com/user-attachments/assets/5dec59ea-4f3d-4a41-b9de-34ff5952c596" />
 
 The following are some of the commonly seen examples from each of the above HTTP status code classes:
 <img width="817" height="467" alt="image" src="https://github.com/user-attachments/assets/e0614af9-b61f-4b64-9a49-d1dc756540c1" />
 
 
+#### HTTP Basic Auth
 
+When we visit the exercise found at the end of this section, it prompts us to enter a username and a password. Unlike the usual login forms, which utilize HTTP parameters to validate the user credentials (e.g. POST request), this type of authentication utilizes a basic HTTP authentication, which is handled directly by the webserver to protect a specific page/directory, without directly interacting with the web application.
 
+To access the page, we have to enter a valid pair of credentials, which are admin:admin in this case:
+```
+curl -u admin:admin http://<SERVER_IP>:<PORT>/
+```
+This time we do get the page in the response. There is another method we can provide the basic HTTP auth credentials, which is directly through the URL as (username:password@URL), as we discussed in the first section.
+```
+curl http://admin:admin@<SERVER_IP>:<PORT>/
+```
+
+#### HTTP Authorization Header
+
+As we are using basic HTTP auth, we see that our HTTP request sets the Authorization header to Basic YWRtaW46YWRtaW4=, which is the base64 encoded value of admin:admin. If we were using a modern method of authentication (e.g. JWT), the Authorization would be of type Bearer and would contain a longer encrypted token.
+
+Let's try to manually set the Authorization, without supplying the credentials, to see if it does allow us access to the page. We can set the header with the -H flag, and will use the same value from the above HTTP request.
+
+As we see, this also gave us access to the page. These are a few methods we can use to authenticate to the page. Most modern web applications use login forms built with the back-end scripting language (e.g. PHP), which utilize HTTP POST requests to authenticate the users and then return a cookie to maintain their authentication.
+
+```
+curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/
+curl -H 'Authorization: Basic YWRtaW46YWRtaW4=''http://<SERVER_IP>:<PORT>/search.php?search=le' 
+```
 
 
 
