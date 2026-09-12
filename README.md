@@ -39,11 +39,11 @@ Resources over HTTP are accessed via a URL, which offers many more specification
 
 <img width="846" height="180" alt="image" src="https://github.com/user-attachments/assets/e7b3008a-af1d-4c9d-b6a4-4e7e2228a464" />
 
-<img width="897" height="729" alt="image" src="https://github.com/user-attachments/assets/d15f2b88-b548-4895-b35a-f9f63a66eb7f" />
+<img width="846" height="729" alt="image" src="https://github.com/user-attachments/assets/d15f2b88-b548-4895-b35a-f9f63a66eb7f" />
 
 **HTTP Flow**
 
-<img width="855" height="364" alt="image" src="https://github.com/user-attachments/assets/01802c1b-c7a2-408e-877f-2b4e350d5f3a" />
+<img width="846" height="364" alt="image" src="https://github.com/user-attachments/assets/01802c1b-c7a2-408e-877f-2b4e350d5f3a" />
 
 The diagram above presents the anatomy of an HTTP request at a very high level. The first time a user enters the URL (inlanefreight.com) into the browser, it sends a request to a DNS (Domain Name System) server to resolve the domain and get its IP. The DNS server looks up the IP address for inlanefreight.com and returns it. All domain names need to be resolved this way, as a server can't communicate without an IP address.
 
