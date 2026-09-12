@@ -110,6 +110,33 @@ Headers can have one or multiple values, appended after the header name and sepa
 curl https://www.inlanefreight.com -A 'Mozilla/5.0'
 ```
 
+#### HTTP Methods and Codes
+
+HTTP supports multiple methods for accessing a resource. In the HTTP protocol, several request methods allow the browser to send information, forms, or files to the server. These methods are used, among other things, to tell the server how to process the request we send and how to reply.
+
+**Request Methods**
+<img width="835" height="579" alt="image" src="https://github.com/user-attachments/assets/da374a28-2345-466f-ba9b-c1895dbbd3af" />
+
+**Status Codes**
+<img width="823" height="335" alt="image" src="https://github.com/user-attachments/assets/5dec59ea-4f3d-4a41-b9de-34ff5952c596" />
+
+The following are some of the commonly seen examples from each of the above HTTP status code classes:
+<img width="817" height="467" alt="image" src="https://github.com/user-attachments/assets/e0614af9-b61f-4b64-9a49-d1dc756540c1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 1.2 HTTP Methods
 _________
 ## 2. Introduction web applications
