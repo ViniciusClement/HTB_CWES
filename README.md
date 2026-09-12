@@ -106,6 +106,10 @@ Headers can have one or multiple values, appended after the header name and sepa
 
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers#range_requests
 
+```
+curl https://www.inlanefreight.com -A 'Mozilla/5.0'
+```
+
 ### 1.2 HTTP Methods
 _________
 ## 2. Introduction web applications
