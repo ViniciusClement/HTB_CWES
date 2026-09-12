@@ -27,14 +27,15 @@ _________
 ## 1. Web Requests
 
 ### 1.1 HTTP Fundamentals
-**HyperText Transfer Protocol (HTTP)**
+
+#### HyperText Transfer Protocol (HTTP)
 
 HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. The default port for HTTP communication is port 80, though this can be changed to any other port, depending on the web server configuration.
 
 We enter a Fully Qualified Domain Name (FQDN) as a Uniform Resource Locator (URL) to reach the desired website, like www.hackthebox.com.
 
 
-**URL**
+#### URL
 Resources over HTTP are accessed via a URL, which offers many more specifications than simply specifying a website we want to visit. Let's look at the structure of a URL:
 
 <img width="846" height="180" alt="image" src="https://github.com/user-attachments/assets/e7b3008a-af1d-4c9d-b6a4-4e7e2228a464" />
@@ -54,7 +55,7 @@ Once the browser gets the IP address linked to the requested domain, it sends a 
 
 In this case, the contents of index.html are read and returned by the web server as an HTTP response. The response also contains the status code (e.g. 200 OK), which indicates that the request was successfully processed. The web browser then renders the index.html contents and presents it to the user.
 
-**Hypertext Transfer Protocol Secure (HTTPS)**
+#### Hypertext Transfer Protocol Secure (HTTPS)
 
 HTTPS (HTTP Secure) protocol was created, in which all communications are transferred in an encrypted format, so even if a third party does intercept the request, they would not be able to extract the data out of it. 
 
@@ -63,7 +64,7 @@ HTTPS (HTTP Secure) protocol was created, in which all communications are transf
 
 We may face such an issue when testing a local web application or with a web application hosted for practice purposes, as such web applications may not yet have implemented a valid SSL certificate. To skip the certificate check with cURL, we can use the -k flag
 
-**HTTP Requests and Responses**
+#### HTTP Requests and Responses
 
 Once the server receives the HTTP request, it processes it and responds by sending the HTTP response, which contains the response code, as discussed in a later section, and may contain the resource data if the requester has access to it.
 
@@ -82,6 +83,10 @@ curl inlanefreight.com -v
 ```
 > [!NOTE]
 > HTTP version 1.X sends requests as clear-text, and uses a new-line character to separate different fields and different requests. HTTP version 2.X, on the other hand, sends requests as binary data in a dictionary form.
+
+
+#### HTTP Headers
+
 
 
 ### 1.2 HTTP Methods
