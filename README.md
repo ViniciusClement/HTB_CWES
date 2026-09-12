@@ -98,6 +98,13 @@ Headers can have one or multiple values, appended after the header name and sepa
 3. Request Headers: The client sends Request Headers in an HTTP transaction. These headers are used in an HTTP request and do not relate to the content of the message. The following headers are commonly seen in HTTP requests.
 <img width="657" height="786" alt="image" src="https://github.com/user-attachments/assets/412577c1-b224-4c1b-9931-cf0fc40d6f70" />
 
+4. Response Headers: Response Headers can be used in an HTTP response and do not relate to the content. Certain response headers such as Age, Location, and Server are used to provide more context about the response. The following headers are commonly seen in HTTP responses.
+<img width="811" height="342" alt="image" src="https://github.com/user-attachments/assets/e3a3a3f8-b8ac-4f28-8dd6-fdb54c3969d3" />
+
+5. Security Headers: Finally, we have Security Headers. With the increase in the variety of browsers and web-based attacks, defining certain headers that enhanced security was necessary. HTTP Security headers are a class of response headers used to specify certain rules and policies to be followed by the browser while accessing the website.
+<img width="820" height="420" alt="image" src="https://github.com/user-attachments/assets/0216c8f9-aab5-4546-abab-2ef032927b10" />
+
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers#range_requests
 
 ### 1.2 HTTP Methods
 _________
