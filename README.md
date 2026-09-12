@@ -87,6 +87,19 @@ curl inlanefreight.com -v
 
 #### HTTP Headers
 
+Headers can have one or multiple values, appended after the header name and separated by a colon. We can divide headers into the following categories:
+
+1. General Headers
+2. Entity Headers
+3. Request Headers
+4. Response Headers
+5. Security Headers
+
+1. General Headers: General headers are used in both HTTP requests and responses. They are contextual and are used to describe the message rather than its contents.
+
+<img width="824" height="296" alt="image" src="https://github.com/user-attachments/assets/a12e2786-67a1-4824-aa06-52885a5e56a8" />
+
+2. Entity Headers: Similar to general headers, Entity Headers can be common to both the request and response. These headers are used to describe the content (entity) transferred by a message. They are usually found in responses and POST or PUT requests.
 
 
 ### 1.2 HTTP Methods
