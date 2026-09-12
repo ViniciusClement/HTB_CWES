@@ -149,7 +149,8 @@ As we see, this also gave us access to the page. These are a few methods we can 
 
 ```
 curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/
-curl -H 'Authorization: Basic YWRtaW46YWRtaW4=''http://<SERVER_IP>:<PORT>/search.php?search=le' 
+curl -H 'Authorization: Basic YWRtaW46YWRtaW4=''http://<SERVER_IP>:<PORT>/search.php?search=le'
+curl -u admin:admin http://<SERVER_IP>:<PORT>/search.php?search=flag -v -i -H "Authorization: Basic YWRtaW46YWRtaW4="
 ```
 
 
