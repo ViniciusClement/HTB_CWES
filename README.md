@@ -195,8 +195,11 @@ curl -H 'Cookie: PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>
 
 #### JSON Data
 
+The POST data appear to be in JSON format, so our request must have specified the Content-Type header to be application/json. We can confirm this by right-clicking on the request, and selecting Copy>Copy Request Headers
+
 ```
 curl -X POST -d '{"search":"london"}' -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php
+curl -X POST -d '{"search":"flag"}' -b 'PHPSESSID=9f2q9ad2gq14uupuhq8qe8o299' -H 'Content-Type: application/json' http://154.57.164.72:32200/search.php
 ```
 
 
